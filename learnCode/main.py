@@ -6,3 +6,4 @@ print(list2)
 
 print(list1[0], "en volgende item", list1[1:4])
 #test
+#test git

@@ -15,3 +15,5 @@ print(carbrands['Jan'])
 for k, v in carbrands.items():
     print(k, v)
 
+func.write_logrecord("INFO", "Dit is een logrecord weggeschreven om te testen")
+

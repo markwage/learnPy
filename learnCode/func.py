@@ -1,6 +1,14 @@
+from datetime import datetime
 # ==============================================================================
 # Functions
 # ==============================================================================
+# ==============================================================================
+# Write logrecord to logfile
+# ==============================================================================
+def write_logrecord(loglevel, logrecord):
+    current_time = datetime.now()
+    with open("application.log", "w") as log_file:
+        log_file.write("%s %s %s" % (current_time, loglevel, logrecord))
 
 # ==============================================================================
 # Connect to the database

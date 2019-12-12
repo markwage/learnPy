@@ -7,8 +7,10 @@ from datetime import datetime
 # ==============================================================================
 def write_logrecord(loglevel, logrecord):
     current_time = datetime.now()
-    with open("application.log", "w") as log_file:
-        log_file.write("%s %s %s" % (current_time, loglevel, logrecord))
+    #with open('application.log', 'a') as log_file:
+    log_file = open('application.log', 'a')
+    log_file.write("\n%s %s %s" % (current_time, loglevel, logrecord))
+    log_file.close()
 
 # ==============================================================================
 # Connect to the database
@@ -30,6 +32,7 @@ def defaultValue(waarde='deDefaultWaarde'):
 def keywordsArgs(name='Mark', favfood='pasta', car='Peugeot'):
     print('Naam:', name, 'Favoriete voedsel', favfood, 'Automerk', car)
 
+# Geef variabel aantal argumenten
 def varArgs(*allArgs):
     total = 0
     for nbr in allArgs:
